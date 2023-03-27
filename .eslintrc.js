@@ -9,7 +9,8 @@ module.exports = {
     'airbnb/hooks',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier'
+    'prettier',
+    'plugin:i18next/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -19,7 +20,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'react'],
+  plugins: ['@typescript-eslint', 'react', 'i18next'],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -34,7 +35,8 @@ module.exports = {
     'react/require-default-props': 0,
     'import/extensions': 0,
     'no-underscore-dangle': 0,
-    'import/no-extraneous-dependencies': 0
+    'import/no-extraneous-dependencies': 0,
+    'i18next/no-literal-string': ['error', { markupOnly: true }]
   },
   globals: {
     __IS_DEV__: true
